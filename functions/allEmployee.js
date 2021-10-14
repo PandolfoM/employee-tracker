@@ -2,8 +2,9 @@ const db = require("../db/connection");
 const cTable = require("console.table");
 
 const allEmployee = function () {
-  const sql = `SELECT employee.*, 
+  const sql = `SELECT employee.id, employee.first_name, employee.last_name, role.salary,
                 role.title AS title,
+                role.salary AS salary,
                 departments.name AS department
                 FROM employee
                 LEFT JOIN role 
