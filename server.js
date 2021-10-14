@@ -1,6 +1,7 @@
 const inquirer = require("inquirer");
 const allDept = require("./functions/allDept")
 const allRole = require("./functions/allRole")
+const allEmployee = require("./functions/allEmployee")
 
 inquirer
   .prompt([
@@ -25,5 +26,8 @@ inquirer
     }
     if (answer.initial === "View all roles") {
       allRole()
+    }
+    if (answer.initial === "View all employees") {
+      allEmployee()
     }
   });

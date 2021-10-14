@@ -24,4 +24,4 @@ VALUES
   ('Count', 'Dooku', 4, NULL),
   ('Chancellor', 'Palpatine', 6, NULL),
   ('Captain', 'Rex', 8, NULL),
-  ('Padme', 'Amidala', 8, NULL);
+  ('Padme', 'Amidala', 7, NULL);
