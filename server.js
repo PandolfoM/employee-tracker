@@ -1,8 +1,20 @@
 const inquirer = require("inquirer");
+const chalk = require('chalk');
+
+// Functions
 const allDept = require("./functions/allDept")
 const allRole = require("./functions/allRole")
 const allEmployee = require("./functions/allEmployee")
 
+console.log(chalk.red(`
+███████ ███    ███ ██████  ██       ██████  ██    ██ ███████ ███████     ████████ ██████   █████   ██████ ██   ██ ███████ ██████  
+██      ████  ████ ██   ██ ██      ██    ██  ██  ██  ██      ██             ██    ██   ██ ██   ██ ██      ██  ██  ██      ██   ██ 
+█████   ██ ████ ██ ██████  ██      ██    ██   ████   █████   █████          ██    ██████  ███████ ██      █████   █████   ██████  
+██      ██  ██  ██ ██      ██      ██    ██    ██    ██      ██             ██    ██   ██ ██   ██ ██      ██  ██  ██      ██   ██ 
+███████ ██      ██ ██      ███████  ██████     ██    ███████ ███████        ██    ██   ██ ██   ██  ██████ ██   ██ ███████ ██   ██ 
+                                                                                                                                  
+                                                                                                                                  
+`))
 inquirer
   .prompt([
     {
