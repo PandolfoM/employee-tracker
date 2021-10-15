@@ -3,18 +3,19 @@ const cTable = require("console.table");
 
 const allEmployee = function () {
   const sql = `
-  SELECT employee.id, employee.first_name, employee.last_name, role.salary,
+  SELECT emp.id, emp.first_name, emp.last_name, role.salary,
   role.title AS title, 
   role.salary AS salary, 
-  departments.name AS department, 
-  CONCAT(employee.first_name, ' ', employee.last_name) AS manager
-  FROM employee
+  departments.name AS department,
+  CONCAT (man.first_name, ' ', man.last_name) AS manager
+  
+  FROM employee emp
   LEFT JOIN role 
-  ON employee.role_id = role.id
+  ON emp.role_id = role.id
   LEFT JOIN departments
   ON role.department_id = departments.id
-  LEFT JOIN employee AS employee_copy
-  ON employee.manager_id = employee_copy.id
+  LEFT JOIN employee man 
+  ON emp.manager_id = man.id
   `;
   db.query(sql, (err, result) => {
     const table = cTable.getTable(result);
