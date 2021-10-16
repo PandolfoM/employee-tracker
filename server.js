@@ -5,6 +5,7 @@ const chalk = require('chalk');
 const allDept = require("./functions/allDept")
 const allRole = require("./functions/allRole")
 const allEmployee = require("./functions/allEmployee")
+const addDept = require("./functions/addDept")
 
 console.log(chalk.red(`
 ███████ ███    ███ ██████  ██       ██████  ██    ██ ███████ ███████     ████████ ██████   █████   ██████ ██   ██ ███████ ██████  
@@ -15,6 +16,7 @@ console.log(chalk.red(`
                                                                                                                                   
                                                                                                                                   
 `))
+
 inquirer
   .prompt([
     {
@@ -41,5 +43,8 @@ inquirer
     }
     if (answer.initial === "View all employees") {
       allEmployee()
+    }
+    if (answer.initial === "Add a department") {
+      addDept()
     }
   });
