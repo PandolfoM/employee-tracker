@@ -1,6 +1,5 @@
 const db = require("../db/connection");
 const inquirer = require("inquirer");
-const allUsers = `SELECT CONCAT(first_name, ' ', last_name) AS name FROM employee`;
 
 const updateEmployee = function () {
   inquirer.prompt([
@@ -38,7 +37,7 @@ const updateEmployee = function () {
       if (err) {
         console.log(err.message)
       } else {
-        console.log(`Updated ${answer.name}'s role`);
+        console.log(`Updated employee ${answer.name}'s role`);
       }
     });
   });
