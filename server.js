@@ -8,6 +8,7 @@ const allEmployee = require("./functions/allEmployee")
 const addDept = require("./functions/addDept")
 const addRole = require("./functions/addRole")
 const addEmployee = require("./functions/addEmployee")
+const updateEmployee = require("./functions/updateEmployee")
 
 console.log(chalk.red(`
 ███████ ███    ███ ██████  ██       ██████  ██    ██ ███████ ███████     ████████ ██████   █████   ██████ ██   ██ ███████ ██████  
@@ -54,5 +55,8 @@ inquirer
     }
     if (answer.initial === "Add an employee") {
       addEmployee()
+    }
+    if (answer.initial === "Update an employee role") {
+      updateEmployee()
     }
   });
