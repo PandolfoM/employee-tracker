@@ -1,5 +1,4 @@
 const db = require("../db/connection");
-const cTable = require("console.table");
 const inquirer = require("inquirer");
 
 const addDept = function () {
@@ -26,7 +25,5 @@ const addDept = function () {
       });
     });
 };
-
-const addDept2 = function (name, req) {};
 
 module.exports = addDept;

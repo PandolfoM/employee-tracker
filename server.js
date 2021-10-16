@@ -6,6 +6,7 @@ const allDept = require("./functions/allDept")
 const allRole = require("./functions/allRole")
 const allEmployee = require("./functions/allEmployee")
 const addDept = require("./functions/addDept")
+const addRole = require("./functions/addRole")
 
 console.log(chalk.red(`
 ███████ ███    ███ ██████  ██       ██████  ██    ██ ███████ ███████     ████████ ██████   █████   ██████ ██   ██ ███████ ██████  
@@ -46,5 +47,8 @@ inquirer
     }
     if (answer.initial === "Add a department") {
       addDept()
+    }
+    if (answer.initial === "Add a role") {
+      addRole()
     }
   });
