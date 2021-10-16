@@ -7,6 +7,7 @@ const allRole = require("./functions/allRole")
 const allEmployee = require("./functions/allEmployee")
 const addDept = require("./functions/addDept")
 const addRole = require("./functions/addRole")
+const addEmployee = require("./functions/addEmployee")
 
 console.log(chalk.red(`
 ███████ ███    ███ ██████  ██       ██████  ██    ██ ███████ ███████     ████████ ██████   █████   ██████ ██   ██ ███████ ██████  
@@ -50,5 +51,8 @@ inquirer
     }
     if (answer.initial === "Add a role") {
       addRole()
+    }
+    if (answer.initial === "Add an employee") {
+      addEmployee()
     }
   });
